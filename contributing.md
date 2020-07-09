@@ -21,7 +21,7 @@
 |	|	|	|--- analogue_digital_convert.sch
 |	|	|	|--- IsolateCircuit.sch
 |	|	|	|--- ProtectionCircuit.sch
-|	|	|---complete EEG circuit diagram
+|	|	|--- complete EEG circuit diagram
 |	|	|	|--- EEG_circuit.sch - this file has the circuit design for a single channel EEG circuit
 |	|	|	|--- EEG.pcb - this file contains the compiled EEG biosensing board with at least 8 channels. 
 |	|--- visualisation tools 
@@ -39,5 +39,38 @@
 
 |--- device output - contains the files related to robotics. 
 ```
+---------------------------------------------------------------------------------
+
+##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
