@@ -67,7 +67,10 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 
-# Before making the contributions the following is required to be done:
+# Before making the contributions the following is required:
+
+[This is a must read about BCI as a system and how it works]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304110/
+
 
 
 
