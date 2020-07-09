@@ -4,6 +4,7 @@
 ## organization of the directory:
 ```
 |--- datasets - all the datasets are provided here
+
 |--- Signal acquisition - in this folder, all the schematics of the EEG designs and the EEG visualisation tools and codes are there.
 |	|---circuits
 |	|	|--- prototype EEG components - all the component circuits needed in the construction of an EEG is here.
@@ -20,9 +21,12 @@
 |	|	|	|--- analogue_digital_convert.sch
 |	|	|	|--- IsolateCircuit.sch
 |	|	|	|--- ProtectionCircuit.sch
-|	|	|--- EEG.pcb - this file contains the compiled EEG biosensing board. 
+| | |--- complete EEG circuit diagram
+|	|	|	|--- EEG_circuit.sch - this file has the circuit design for a single channel EEG circuit
+|	|	|	|--- EEG.pcb - this file contains the compiled EEG biosensing board with at least 8 channels. 
 |	|--- visualisation tools 
-|	|	|--- plot.py - this file is for the visualisation of the given dataset  
+|	|	|--- plot.py - this file is for the visualisation of the given dataset 
+
 |--- feature extraction - this folder is for processing the data from EEG 
 |	|--- training.py - This is an example of training a model with our training data.
 |	|--- Models - This is the folder where your training models will stay
@@ -30,7 +34,9 @@
 |	|	|	|--- training.py - This is script we used to training our first model
 |	|	|	|--- analysis.py - This is the script we used to run test and get the confusion matrix
 |	|	|	|--- result.jpeg - The resulting confusion matrix
-|--- feature translation - this contains all the files for classifying signals 
+
+|--- feature translation - this contains all the files for classifying signals and arduino programming 
+
 |--- device output - contains the files related to robotics. 
 ```
 
