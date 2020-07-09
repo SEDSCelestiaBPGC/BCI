@@ -41,7 +41,31 @@
 ```
 ---------------------------------------------------------------------------------
 
-##
+
+## Prerequisits:
+
+- DL/ML and related python libraries (PyTorch, TensorFlow, scipy, sklearn, or some more)
+- Basic understanding of BCI and EEG devices
+- PCB design using Autodesk Eagle
+- understanding of Arduino 
+- ROS basics (optional)
+- a general idea of time domain circuits. 
+- classification algorithms (like CNN, SVM, k-clustering, and so on).
+- shell script (UNIX commands)
+
+----------------------------------------------------------------
+
+
+## Guidlines: 
+**Firstly, the project is divided into 3 parts:** 
+  1) EEG circuit building
+  2) Brain Signal analysis
+  3) robotics and controls subsystem  
+***you choose any one of the parts and start working on it 
+
+
+
+
 
 
 
