@@ -61,7 +61,14 @@
   1) EEG circuit building
   2) Brain Signal analysis
   3) robotics and controls subsystem  
-***you choose any one of the parts and start working on it 
+
+***You choose any of the parts and start working on it according to the instructions and resources provided.***
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+# Before making the contributions the following is required to be done:
+
 
 
 
