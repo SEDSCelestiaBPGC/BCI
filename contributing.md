@@ -6,9 +6,21 @@
 |--- datasets - all the datasets are provided here
 |--- Signal acquisition - in this folder, all the schematics of the EEG designs and the EEG visualisation tools and codes are there.
 |	|---circuits
-|	|	|--- prototype EEG 
+|	|	|--- prototype EEG components - all the component circuits needed in the construction of an EEG is here.
 |	|	|	|--- DRL_circuit.sch
-|	|	|	|--- 
+|	|	|	|--- RFI_filter.sch
+|	|	|	|--- Instrumentation_Amplifier.sch
+|	|	|	|--- Variable_amp_circut.sch
+|	|	|	|--- HighPassFilter.sch
+|	|	|	|--- LowPassFilter.sch
+|	|	|	|--- CMR_circut.sch
+|	|	|	|--- Buffer_circuit.sch
+|	|	|	|--- Clamp_circuit.sch
+|	|	|	|--- REF_circuit.sch
+|	|	|	|--- analogue_digital_convert.sch
+|	|	|	|--- IsolateCircuit.sch
+|	|	|	|--- ProtectionCircuit.sch
+|	|	|--- EEG.pcb - this file contains the compiled EEG biosensing board. 
 |	|--- visualisation tools 
 |	|	|--- plot.py - this file is for the visualisation of the given dataset  
 |--- feature extraction - this folder is for processing the data from EEG 
@@ -18,26 +30,8 @@
 |	|	|	|--- training.py - This is script we used to training our first model
 |	|	|	|--- analysis.py - This is the script we used to run test and get the confusion matrix
 |	|	|	|--- result.jpeg - The resulting confusion matrix
-|--- feature translation - this contains all the files for classifying signals
+|--- feature translation - this contains all the files for classifying signals 
 |--- device output - contains the files related to robotics. 
 ```
 
-```
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
-```
 
