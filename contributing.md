@@ -67,9 +67,16 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 
-# Before making the contributions the following is required:
+## Before making the contributions the following is required to go through:
 
-[This is a must read about BCI as a system and how it works]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304110/
+- This is a must read about general layout of a BCI as a system, EEG channel selection, different signal classification algorithms, etc -  
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304110/
+
+- Brain Computer Interface w/ Python and OpenBCI. (This will get you familiar with using DL models on EEG signals.) 
+https://www.youtube.com/playlist?list=PLQVvvaa0QuDeU-QCAwZl2UmSpfb4sWbxY 
+
+- Deep learning for electroencephalogram (EEG) classification tasks: a review (This has in-depth analysis of DL techniques people have used so far) https://iopscience.iop.org/article/10.1088/1741-2552/ab0ab5
+ 
 
 
 
