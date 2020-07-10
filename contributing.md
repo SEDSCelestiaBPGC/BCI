@@ -49,7 +49,7 @@
 - PCB design using Autodesk Eagle
 - understanding of Arduino 
 - ROS basics (optional)
-- a general idea of time domain circuits. 
+- a general idea of time-domain and frequency-domain circuits. 
 - classification algorithms (like CNN, SVM, k-clustering, and so on).
 - shell script (UNIX commands)
 
