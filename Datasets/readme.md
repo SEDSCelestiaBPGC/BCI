@@ -1,5 +1,4 @@
 # Datasets to use for training
-(we will keep updating this list):
 
 [**1. Left/Right Hand MI (subject 1)**](https://drive.google.com/drive/folders/19MpbN892wGTjioDRvq2qjnbEIwsujywR)
 
