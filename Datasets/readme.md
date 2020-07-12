@@ -2,6 +2,8 @@
 
 [**1. Left/Right Hand MI (subject 1)**](https://drive.google.com/drive/folders/19MpbN892wGTjioDRvq2qjnbEIwsujywR)
 
+**If you're using colab, then you can download this data directly to your colab session storage. see 'download s01.ipynb'.**
+
 **Description:** This contains Motor Imagery data of the left and right hand of a subject.
 Each of the npy files is of the shape `(99,64,3584)`. These are 99 trials, each consisting of 64 channels of eeg data recorded at sampling rate of 512 Hz.
 
