@@ -60,6 +60,18 @@ number of simultaneous sources. A signal that may be of interest could be overla
 ***Brain signals are inherently non-stationary.*** 
 Time information about when a certain feature occurs should be obtained. Our adaptive approach of using support vector machines(SVM) for segmenting the signals from multiple electrodes into a scatter plot then determining which group of signals represent what feature is a commonly used novel approach in BCIs. But before classification of these ever changing signals, it is compulsory to exterminate any unwanted information signals such as noise which occurs due to eye movements, muscle contractions, blood flow, transfer of neurotransmitters. They are minute, generally, but can become significant in some environments. Such unwanted signals can be removed using both linear ( such as band-pass filters) and non-linear filtration techniques.
 
+### Datasets to use for training
+
+[**1. Left/Right Hand MI (subject 1)**](https://drive.google.com/drive/folders/19MpbN892wGTjioDRvq2qjnbEIwsujywR)
+
+**If you're using colab, then you can download this data directly to your colab session storage. The script for this is in the Datasets directory.**
+
+**Description:** This contains Motor Imagery data of the left and right hand of a subject.
+Each of the npy files is of the shape `(99,64,3584)`. These are 99 trials, each consisting of 64 channels of eeg data recorded at sampling rate of 512 Hz.
+
+This is only a part of the original published data, where a total of 52 subjects were studied. Various mental tasks were recorded in EEG (Motor Imagery data is only one of the tasks). The complete dataset can be found [here](http://gigadb.org/dataset/view/id/100295). **An in-depth description of the data is provided in the [accompanying article](https://academic.oup.com/gigascience/article/6/7/gix034/3796323).**
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Add-ons: 
