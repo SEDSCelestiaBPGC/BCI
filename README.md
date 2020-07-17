@@ -71,6 +71,8 @@ Each of the npy files is of the shape `(99,64,3584)`. These are 99 trials, each 
 
 This is only a part of the original published data, where a total of 52 subjects were studied. Various mental tasks were recorded in EEG (Motor Imagery data is only one of the tasks). The complete dataset can be found [here](http://gigadb.org/dataset/view/id/100295). **An in-depth description of the data is provided in the [accompanying article](https://academic.oup.com/gigascience/article/6/7/gix034/3796323).**
 
+### Output Decive
+*The rover we are using is a simple wheeled cart that has a robotic pincer which can open, close, or rotate.* 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
