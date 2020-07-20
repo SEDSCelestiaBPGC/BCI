@@ -11,6 +11,8 @@ import wget
 url = 'ftp://parrot.genomics.cn/gigadb/pub/10.5524/100001_101000/100295/mat_data/s01.mat'
 wget.download(url)
 
+# ---- Following code is for reading the mat file and extracting that data we need: -------
+
 import scipy.io
 subject = scipy.io.loadmat('/content/s01.mat')
 
