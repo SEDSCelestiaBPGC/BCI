@@ -34,8 +34,6 @@
 |	|	|--- analysis.py - This is the script we used to run test and get the confusion matrix
 |	|	|--- result.jpeg - The resulting confusion matrix
 
-|--- feature translation - this contains all the files for classifying signals and arduino programming 
-
 |--- device output - contains the files related to robotics. 
 ```
 ---------------------------------------------------------------------------------
