@@ -5,31 +5,49 @@
 # can be download using pip: pip install wget
 
 import wget
-
+import pandas as pd
+import numpy as np
+import os
 
 # we're downloading only subject_01 data for now, but the url can be altered to download any of the 52 subjects' data
-url = 'ftp://parrot.genomics.cn/gigadb/pub/10.5524/100001_101000/100295/mat_data/s01.mat'
-wget.download(url)
+urls = []
+nums = 53
+for i in range(nums):
+  if i in range(1, 10):
+    number = '{}'.format(i)
+    urls.append('ftp://parrot.genomics.cn/gigadb/pub/10.5524/100001_101000/100295/mat_data/')
+    wget.download(urls[i], out='s'+number.zfill(2)+'.mat')  
+  else:
+    urls.append('ftp://parrot.genomics.cn/gigadb/pub/10.5524/100001_101000/100295/mat_data/')
+    wget.download(urls[i], out='s{}'.format(i)+'.mat')
 
 # ---- Following code is for reading the mat file and extracting that data we need: -------
 
 import scipy.io
-subject = scipy.io.loadmat('/content/s01.mat')
 
-# how subject.mat files are structured is desccribed here: 
-# https://academic.oup.com/gigascience/article/6/7/gix034/3796323
-left = subject['eeg']['imagery_left'][0][0][:64]
-right = subject['eeg']['imagery_right'][0][0][:64]
-event_markers = subject['eeg']['imagery_event'][0][0][0]
+num_subjects = 53
+left = []
+right = []
+event_markers = []
 
-# print(left.shape, event_markers.shape) # (64, 358400) (358400,)
+for i in range(1, num_subjects):
+  if i in range(1, 10):
+    num = '{}'.format(i)
+    subject_i = scipy.io.loadmat(os.path.join('/content', 's'+num.zfill(2)+'.mat'))
+  else:
+    subject_i = scipy.loadmat(os.path.join('/content', 's{}'.format(i)+'.mat'))
+  # how subject.mat files are structured is desccribed here: 
+  # https://academic.oup.com/gigascience/article/6/7/gix034/3796323
+  left.append(subject_i['eeg']['imagery_left'][0][0][:64])
+  right.append(subject_i['eeg']['imagery_right'][0][0][:64])
+  event_markers.append(subject_i['eeg']['imagery_event'][0][0][0])
 
-import pandas as pd
-import numpy as np
+  # print(left.shape, event_markers.shape) # (64, 358400) (358400,)
 
-df_left = pd.DataFrame(left).T.rename(columns = lambda x: 'left'+str(x))
-df_right = pd.DataFrame(right).T.rename(columns = lambda x: 'right'+str(x))
-markers = pd.Series(event_markers)
+  df_left = pd.DataFrame(left[i]).T.rename(columns = lambda x: 'left'+str(x))
+  df_right = pd.DataFrame(right[i]).T.rename(columns = lambda x: 'right'+str(x))
+  markers = pd.Series(event_markers[i])
+
 df = df_left.join(df_right)
 df['mark'] = markers
 
