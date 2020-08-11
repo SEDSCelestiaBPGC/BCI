@@ -184,3 +184,15 @@ for e in range(epochs):
   model_performance = model.evaluate(test_x, test_y, verbose=0)
   model.save('Model with performance: {}'.format(model_performance))
   print(model_performance)
+
+# For analysis
+from sklearn.metrics import classification_report, confusion_matrix
+
+predictions = model.predict(test_x)
+
+pred = np.argmax(predictions, axis=1)
+label = np.argmax(test_y, axis=1)
+
+print(classification_report(label, pred))
+print('\n')
+print(confusion_matrix(label, pred))
