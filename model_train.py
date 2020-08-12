@@ -45,9 +45,9 @@ for actions in options:
     num_test = int(len(left_imagery))
     indices = list(range(num_test))
     np.random.shuffle(indices)
-    print(indices)
+    #print(indices)
     split = int(test_size * len(left_imagery))
-    print(split)
+    #print(split)
     train_idx, test_idx = indices[split:], indices[:split]
 
     for indices in train_idx:
@@ -105,7 +105,6 @@ for item in os.listdir('data/right'):
 for datas in r:
   combined_data.append([datas, [0, 1]])  # [0, 1] for right
 
-
 # Create testing data
 l1 = []
 r1 = []
@@ -148,6 +147,7 @@ batch_size = 32
 
 # Model 
 model = Sequential()
+
 model.add(Conv1D(16, (3), input_shape=train_x.shape[1:]))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
@@ -168,11 +168,6 @@ model.add(Flatten())
 model.add(Dropout(0.25))
 
 model.add(Dense(512))
-model.add(Activation('relu'))
-model.add(Dropout(0.25))
-model.add(BatchNormalization())
-
-model.add(Dense(256))
 model.add(Activation('relu'))
 model.add(Dropout(0.25))
 model.add(BatchNormalization())
