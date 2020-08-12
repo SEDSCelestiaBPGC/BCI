@@ -67,4 +67,17 @@ def download_mat(subjects):
     # print(bci_left.shape, bci_right.shape) # (99, 64, 3584) (99, 64, 3584)
 
 # Example testing   
-download_mat(['s01.mat', 's02.mat', 's03.mat'])
+# Specify relevant number of files in 'number_of_matfiles'
+
+subjs = []
+num_of_matfiles = 21
+for i in range(1, num_of_matfiles):
+  if i >= 1 and i <= 9:
+    num_subj = '{}'.format(i).zfill(2)
+    mat_file = 's' + num_subj + '.mat'
+    subjs.append(mat_file)
+  else:
+    mat_file = 's{}.mat'.format(i)
+    subjs.append(mat_file)
+
+download_mat(subjs)
