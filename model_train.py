@@ -148,12 +148,12 @@ batch_size = 32
 
 # Model 
 model = Sequential()
-model.add(Conv1D(64, (3), input_shape=train_x.shape[1:]))
+model.add(Conv1D(16, (3), input_shape=train_x.shape[1:]))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 model.add(MaxPooling1D(pool_size=(2)))
 
-model.add(Conv1D(64, (2)))
+model.add(Conv1D(32, (2)))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 model.add(MaxPooling1D(pool_size=(2)))
@@ -172,15 +172,19 @@ model.add(Activation('relu'))
 model.add(Dropout(0.25))
 model.add(BatchNormalization())
 
+model.add(Dense(256))
+model.add(Activation('relu'))
+model.add(Dropout(0.25))
+model.add(BatchNormalization())
+
 model.add(Dense(2))
 model.add(Activation('sigmoid'))
 
 model.compile(loss='binary_crossentropy', metrics=['accuracy'], optimizer='adam')
 
-epochs = 30
+epochs = 25
 for e in range(epochs):
-  model.fit(train_x, train_y, batch_size=batch_size, epochs=1, validation_data=(test_x, test_y))
-
+  history = model.fit(train_x, train_y, batch_size=batch_size, epochs=1, validation_data=(test_x, test_y))
   model_performance = model.evaluate(test_x, test_y, verbose=0)
   model.save('Model with performance: {}'.format(model_performance))
   print(model_performance)
