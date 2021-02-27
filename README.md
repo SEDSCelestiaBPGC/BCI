@@ -85,7 +85,7 @@ This is only a part of the original published data, where a total of 52 subjects
 - Basic python tutorial can be accessed through this [Link](https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=6517s)
 
 - All the coding part is done in python language and so it is very important to have a strong grasp on it. Important libraries that are used are:
-  - [Numpy](https://numpy.org/doc/stable/)
+  - [Numpy](https://www.kaggle.com/abdullahsahin/numpy-tutorial-for-beginner)
   - [Pandas](https://www.kaggle.com/learn/pandas)
   - [Matplotlib](https://www.tutorialspoint.com/matplotlib/index.htm)
   - [Pytorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
