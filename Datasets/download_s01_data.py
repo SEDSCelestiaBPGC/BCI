@@ -5,6 +5,7 @@
 # can be download using pip: pip install wget
 
 import wget
+import thread
 
 
 # we're downloading only subject_01 data for now, but the url can be altered to download any of the 52 subjects' data
